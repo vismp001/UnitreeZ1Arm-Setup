@@ -1,0 +1,1 @@
+'http://packages.ros.org/ros/ubuntu/pool/main/p/python3-rosinstall-generator/python3-rosinstall-generator_0.1.23-1_all.deb' python3-rosinstall-generator_0.1.23-1_all.deb 11804 MD5Sum:b8f01a493feb485a3d57d42a6557b191

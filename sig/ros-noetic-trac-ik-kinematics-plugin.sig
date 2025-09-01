@@ -1,0 +1,6 @@
+'http://packages.ros.org/ros/ubuntu/pool/main/r/ros-noetic-trac-ik-lib/ros-noetic-trac-ik-lib_1.6.7-1focal.20250521.004412_amd64.deb' ros-noetic-trac-ik-lib_1.6.7-1focal.20250521.004412_amd64.deb 105532 MD5Sum:cf081af0fedb2ae05737f573ebad252b
+'http://packages.ros.org/ros/ubuntu/pool/main/r/ros-noetic-trac-ik-kinematics-plugin/ros-noetic-trac-ik-kinematics-plugin_1.6.7-1focal.20250521.004832_amd64.deb' ros-noetic-trac-ik-kinematics-plugin_1.6.7-1focal.20250521.004832_amd64.deb 43096 MD5Sum:a183b650612ebc425ab28aa2e7336231
+'http://us.archive.ubuntu.com/ubuntu/pool/universe/n/nlopt/libnlopt0_2.6.1-8ubuntu2_amd64.deb' libnlopt0_2.6.1-8ubuntu2_amd64.deb 166540 MD5Sum:dd483631701c0dd408c7a90ed09a6185
+'http://us.archive.ubuntu.com/ubuntu/pool/universe/n/nlopt/libnlopt-dev_2.6.1-8ubuntu2_amd64.deb' libnlopt-dev_2.6.1-8ubuntu2_amd64.deb 29624 MD5Sum:984a99b98a28d2905cf03fe8c21247e9
+'http://us.archive.ubuntu.com/ubuntu/pool/universe/n/nlopt/libnlopt-cxx0_2.6.1-8ubuntu2_amd64.deb' libnlopt-cxx0_2.6.1-8ubuntu2_amd64.deb 192976 MD5Sum:cdff767280045e956b0b227350a2a20b
+'http://us.archive.ubuntu.com/ubuntu/pool/universe/n/nlopt/libnlopt-cxx-dev_2.6.1-8ubuntu2_amd64.deb' libnlopt-cxx-dev_2.6.1-8ubuntu2_amd64.deb 10996 MD5Sum:7e4563c654f6ad665d08c2d1367811ca
