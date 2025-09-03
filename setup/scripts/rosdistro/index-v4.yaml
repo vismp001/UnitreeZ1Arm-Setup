@@ -1,0 +1,13 @@
+%YAML 1.1
+# ROS index file
+# see REP 153: http://ros.org/reps/rep-0153.html
+---
+distributions:
+  noetic:
+    distribution: [noetic/distribution.yaml]
+    distribution_cache: file:///ros-offline-cache/rosdistro/noetic-cache.yaml.gz
+    distribution_status: end-of-life
+    distribution_type: ros1
+    python_version: 3
+type: index
+version: 4
