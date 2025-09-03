@@ -2,6 +2,7 @@
 
 SYSTEM_USER="INSTALLER"
 SETUP_FOLDER=./setup
+PACKAGES_FOLDER=$SETUP_FOLDER/packages
 
 log() {
 	echo -e "\033[1;32m[$SYSTEM_USER]\033[0m $1"
@@ -15,24 +16,24 @@ install_from() {
 }
 
 log "Setting up ROS Noetic..."
-install_from $SETUP_FOLDER/python-minimal
-install_from $SETUP_FOLDER/python3
-install_from $SETUP_FOLDER/curl
+install_from $PACKAGES_FOLDER/python-minimal
+install_from $PACKAGES_FOLDER/python3
+install_from $PACKAGES_FOLDER/curl
 
 sleep 30
 
-install_from $SETUP_FOLDER/ros-noetic-desktop-full
+install_from $PACKAGES_FOLDER/ros-noetic-desktop-full
 
 log "Adding ROS Noetic to source..."
 source /opt/ros/noetic/setup.bash
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 
 log "Installing ROS Noetic dependencies for building packages..."
-install_from $SETUP_FOLDER/python3-rosdep
-install_from $SETUP_FOLDER/python3-rosinstall
+install_from $PACKAGES_FOLDER/python3-rosdep
+install_from $PACKAGES_FOLDER/python3-rosinstall
 install_from $SETUP_FOLDER/python3-rosinstall-generator
-install_from $SETUP_FOLDER/python3-wstool
-install_from $SETUP_FOLDER/build-essential
+install_from $PACKAGES_FOLDER/python3-wstool
+install_from $PACKAGES_FOLDER/build-essential
 
 #Needs adapting below
 sudo rosdep init
@@ -44,19 +45,19 @@ rosdep update
 #install_from $SETUP_FOLDER/liburdfdom-dev
 
 log "Setting up Moveit Noetic..."
-install_from $SETUP_FOLDER/ros-noetic-moveit-*
-install_from $SETUP_FOLDER/ros-noetic-joint-trajectory-controller 
-install_from $SETUP_FOLDER/ros-noetic-trac-ik-kinematics-plugin
+install_from $PACKAGES_FOLDER/ros-noetic-moveit-*
+install_from $PACKAGES_FOLDER/ros-noetic-joint-trajectory-controller 
+install_from $PACKAGES_FOLDER/ros-noetic-trac-ik-kinematics-plugin
 
 log "Setting up Python interface..."
-install_from $SETUP_FOLDER/pinocchio
+install_from $PACKAGES_FOLDER/pinocchio
 #Needs adapting below
 echo "export LD_LIBRARY_PATH=/usr/local/lib:\$LD_LIBRARY_PATH" >> ~/.bashrc
 echo "export CMAKE_PREFIX_PATH=/usr/local:\$CMAKE_PREFIX_PATH" >> ~/.bashrc
 echo "export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:\$PKG_CONFIG_PATH" >> ~/.bashrc
 
 log "Setting up Pybind11..."
-install_from $SETUP_FOLDER/pybind11
+install_from $PACKAGES_FOLDER/pybind11
 
 log "Setting up Z1 base dependencies..."
 sudo ln -s /usr/include/eigen3/Eigen /usr/local/include/Eigen
@@ -82,3 +83,8 @@ log "Making commands runnable..."
 source /opt/ros/noetic/setup.bash
 source ~/z1_ws/devel/setup.bash
 echo "source ~/z1_ws/devel/setup.bash" >> ~/.bashrc
+
+log "Please restart the terminal for changes to take effect"
+log "You may have to source in the new terminal..."
+log "  source /opt/ros/noetic/setup.bash"
+log "  source ~/z1_ws/devel/setup.bash""
